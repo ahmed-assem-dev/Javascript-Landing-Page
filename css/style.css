@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  background-image: linear-gradient(to bottom right, #6196b2, #dcdcdc);
+}
+nav {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#toggleBtn {
+  display: none;
+  color: aliceblue;
+  text-align: center;
+}
+.navUl {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  justify-content: end;
+  margin: 0;
+}
+.navUl li {
+  color: whitesmoke;
+  float: right;
+  padding: 10px;
+}
+.navUl a:hover {
+  background-color: #6196b2;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+.pageTitle {
+  margin: 2em;
+  width: 100%;
+  text-align: center;
+}
+.pageTitle h1 {
+  width: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: #6196b2 2px solid;
+  margin: 1em auto;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.content section {
+  max-width: 40em;
+  margin: 0 auto;
+  margin-bottom: 20em;
+  padding-top: 5em;
+}
+.content :last-child {
+  margin-bottom: 6em;
+}
+
+section p {
+  font-weight: 100;
+  font-style: italic;
+  text-indent: 1em;
+  line-height: 2;
+}
+h2 {
+  margin: 0;
+}
+.backToTop {
+  padding: 1em;
+}
+.backToTop a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: fit-content;
+  margin: 0 auto;
+  border-bottom: 1px solid black;
+}
+.backToTop a:hover {
+  border-bottom: 1px solid #746a50;
+  color: #746a50;
+}
+.foot {
+  border-top: 2px dotted gainsboro;
+  text-align: center;
+}
+#backToTop {
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  nav {
+    display: block;
+    width: max-content;
+    height: 100%;
+  }
+  #toggleBtn {
+    display: block;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .navUl {
+    flex-direction: column;
+    margin: 0;
+  }
+  .displayed {
+    display: none;
+  }
+  .content section {
+    max-width: 20em;
+  }
+  .foot {
+    text-align: center;
+  }
+}
